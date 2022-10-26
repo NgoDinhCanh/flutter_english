@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:tlc_app_2/packages/quote/quote.dart';
 import 'package:tlc_app_2/pages/landing_page.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Quotes().getAll();
   runApp(const MyApp());
 }
 
